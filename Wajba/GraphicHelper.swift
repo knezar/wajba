@@ -25,6 +25,17 @@ class GraphicHelper: NSObject {
         ])
     }
     
+    func blurImage(usingImage image: UIImage, blurAmount : CGFloat) -> UIImage? {
+        guard let ciImage = CIImage(image: image) else {return nil}
+        let blurFilter = CIFilter(name: "CIGaussianBlur")
+        blurFilter?.setValue(ciImage, forKey: kCIInputImageKey)
+        blurFilter?.setValue(blurAmount, forKey: kCIInputRadiusKey)
+        
+        guard let outputImage = blurFilter?.outputImage else {return nil}
+        
+        
+        return UIImage(ciImage: outputImage)
+    }
     func setupTextFieldPalceHolder(textField: UITextField, text: String) {
         let attrs =  [
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -36,25 +47,24 @@ class GraphicHelper: NSObject {
     func setGradient (view: UIView) {
          let tintLayer = CAGradientLayer()
         tintLayer.frame = view.bounds
-        tintLayer.colors = [UIColor.clear.cgColor, UIColor(white: 0, alpha: 0.5).cgColor]
+        tintLayer.colors = [UIColor.clear.cgColor, UIColor(white: 0, alpha: 0.65).cgColor]
         tintLayer.locations = [0.0, 1.0]
         view.layer.addSublayer(tintLayer)
      }
-//    func dismissDimmedView () {
-//        UIView.animate(withDuration: 0.5) {
-//            self.myView.alpha = 0
-//        }
-//    }
-//
-//    func animateMapView(view: UIView) {
-//        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-//            view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-//        }, completion: nil)
-//
-//    }
-//    func dismissMap (view: UIView) {
-//        UIView.animate(withDuration: 0.5) {
-//            view.frame = CGRect(x: 0, y: -view.frame.height, width: view.frame.width, height: view.frame.height)
-//        }
-//    }
+
+    func setNavBarImages(image: UIImage) -> UIBarButtonItem {
+        let imageView = UIImageView()
+        imageView.image = image.withRenderingMode(.alwaysOriginal)
+        imageView.isUserInteractionEnabled = false
+        let button = UIButton(type: .custom)
+        button.adjustsImageWhenHighlighted = true
+        button.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        let navItem = UIBarButtonItem(customView: button)
+        return navItem
+    }
 }

@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-BG" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-0V-6Zf">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-0V-6Zf">
+                    <rect key="frame" x="-15" y="29" width="444" height="882"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tqP-Nv-Zwq">
@@ -39,7 +39,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-gW-OxR">
-                    <rect key="frame" x="10" y="104" width="394" height="748"/>
+                    <rect key="frame" x="10" y="104" width="394" height="792"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9yM-7o-jmK">
                         <size key="itemSize" width="50" height="50"/>
@@ -51,15 +51,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1ey-0V-6Zf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="64z-st-723"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1ey-0V-6Zf" secondAttribute="trailing" id="AqF-0M-nIO"/>
+                <constraint firstItem="1ey-0V-6Zf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-15" id="64z-st-723"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1ey-0V-6Zf" secondAttribute="trailing" constant="-15" id="AqF-0M-nIO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tqP-Nv-Zwq" secondAttribute="trailing" id="Lmc-Li-Ad1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Yb-gW-OxR" secondAttribute="bottom" constant="10" id="RIH-wl-tQi"/>
+                <constraint firstAttribute="bottom" secondItem="0Yb-gW-OxR" secondAttribute="bottom" id="RIH-wl-tQi"/>
                 <constraint firstItem="0Yb-gW-OxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Wnc-p5-vaX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Yb-gW-OxR" secondAttribute="trailing" constant="10" id="XI3-Rm-QWt"/>
                 <constraint firstItem="tqP-Nv-Zwq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="YZa-Ov-hxi"/>
-                <constraint firstItem="1ey-0V-6Zf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bha-tZ-GA2"/>
-                <constraint firstAttribute="bottom" secondItem="1ey-0V-6Zf" secondAttribute="bottom" id="d60-Hn-inl"/>
+                <constraint firstItem="1ey-0V-6Zf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-15" id="bha-tZ-GA2"/>
+                <constraint firstAttribute="bottom" secondItem="1ey-0V-6Zf" secondAttribute="bottom" constant="-15" id="d60-Hn-inl"/>
                 <constraint firstItem="0Yb-gW-OxR" firstAttribute="top" secondItem="tqP-Nv-Zwq" secondAttribute="bottom" constant="10" id="tWY-R4-ala"/>
                 <constraint firstItem="tqP-Nv-Zwq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zSo-Dh-dQ6"/>
             </constraints>
@@ -67,7 +67,4 @@
             <point key="canvasLocation" x="139" y="120"/>
         </view>
     </objects>
-    <resources>
-        <image name="Main-BG" width="1080" height="720"/>
-    </resources>
 </document>

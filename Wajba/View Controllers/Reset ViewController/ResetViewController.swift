@@ -19,16 +19,15 @@ class ResetViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureTextFields()
     }
     
     // MARK: - Private
     func configureTextFields() {
          emailTextField.delegate = self
-         
-         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
-         graphicHelper.blurBackground(imageView: backgroundImage)
+
+        setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
+        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
          self.navigationController?.setNavigationBarHidden(true, animated: true)
      }
     func setupTextFieldPalceHolder(textField: UITextField, text: String) {

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController" customModule="Wajba" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundImage" destination="0Oj-MN-efv" id="FWM-OL-nJn"/>
+                <outlet property="backgroundImage" destination="0Oj-MN-efv" id="bcx-0e-vQV"/>
                 <outlet property="emailTextField" destination="2o1-JY-YED" id="NUm-OY-lkG"/>
                 <outlet property="firstNameTextField" destination="fLb-FG-EE8" id="Soe-WH-K3a"/>
                 <outlet property="lastNameTextField" destination="HP4-Le-dxl" id="oRF-Go-uzE"/>
@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-BG" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-MN-efv">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-MN-efv">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wajba" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F5-b5-XDV">
@@ -214,7 +214,4 @@
             <point key="canvasLocation" x="551.20000000000005" y="312.59370314842579"/>
         </view>
     </objects>
-    <resources>
-        <image name="Main-BG" width="1080" height="720"/>
-    </resources>
 </document>

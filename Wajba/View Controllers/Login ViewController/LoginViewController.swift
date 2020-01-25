@@ -25,17 +25,18 @@ class LoginViewController: UIViewController {
 
         configureTextFields()
         setupBackGroundblur()
+
     }
     // MARK: - Private
     private func configureTextFields() {
         userNameTextField.delegate = self
         passwordTextField.delegate = self
         
-        setupTextFieldPalceHolder(textField: userNameTextField, text: "Emailss")
+        setupTextFieldPalceHolder(textField: userNameTextField, text: "Email")
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
     }
     private func setupBackGroundblur() {
-        graphicHelper.blurBackground(imageView: backgroundImage)
+        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
     }
     private func setupTextFieldPalceHolder(textField: UITextField, text: String) {
         let attrs =  [
@@ -53,18 +54,18 @@ class LoginViewController: UIViewController {
         else {return}
         let parameters = ["email": userName, "password":password]
         
-        let mainMenuViewController = MainMenuViewController()
-               navigationController?.pushViewController(mainMenuViewController, animated: true)
     }
     
     @IBAction func didPressCreateAccount(_ sender: UIButton) {
         let signupViewController = SignupViewController()
-        navigationController?.pushViewController(signupViewController, animated: true)
+        signupViewController.modalPresentationStyle = .fullScreen
+        present(signupViewController, animated: true, completion: nil)
     }
     
     @IBAction func didPressNeedHelp(_ sender: UIButton) {
         let resetViewController = ResetViewController()
-        navigationController?.pushViewController(resetViewController, animated: true)
+        resetViewController.modalPresentationStyle = .fullScreen
+        present(resetViewController, animated: true, completion: nil)
     }
 }
 

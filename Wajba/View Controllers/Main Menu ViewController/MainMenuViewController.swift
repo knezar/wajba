@@ -22,23 +22,27 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var menuBarCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    // Hide the Navigation Bar
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        title = "Wajba"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configurMenuBar()
         configureMainCollectionView()
-        graphicHelper.blurBackground(imageView: backgroundImage)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
-
-        //navigationItem.setHidesBackButton(true, animated: false)
+        configureNavItems()
+        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
+        navigationItem.title = "Wajba"
+    }
+    
+    func configureNavItems() {
+        navigationItem.leftBarButtonItem =  navButtonConfiguration(string: "Menu Icon", selector: #selector (handleMenuButtonPressed))
+        navigationItem.rightBarButtonItem = navButtonConfiguration(string: "Search Icon", selector: #selector (handleSearchButtonPressed))
+    }
+    func navButtonConfiguration(string: String, selector: Selector) -> UIBarButtonItem {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: string), for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.addTarget(self, action: selector, for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        return barButton
     }
     
     func configurMenuBar() {
@@ -57,12 +61,13 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         mainCollectionView.showsVerticalScrollIndicator = false
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-    // Show the Navigation Bar
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    @objc func handleSearchButtonPressed() {
+        print("search button pressed")
     }
     
+    @objc func handleMenuButtonPressed() {
+        print("Menu button pressed")
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == menuBarCollectionView {
@@ -88,7 +93,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == mainCollectionView {
-            return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height * 0.4)
+            return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height * 0.475)
         } else {
         return CGSize(width: collectionView.frame.size.width / 4, height: collectionView.frame.size.height)
         }
@@ -98,3 +103,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         return 0
     }
 }
+
+
+

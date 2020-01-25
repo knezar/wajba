@@ -20,13 +20,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//    // Hide the Navigation Bar
-//            self.navigationController?.setNavigationBarHidden(false, animated: true)
-//        }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +27,6 @@ class SignupViewController: UIViewController {
         configureTextFields()
 
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//    // Show the Navigation Bar
-//            self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        }
 
     // MARK: - Private
        func configureTextFields() {
@@ -47,8 +34,7 @@ class SignupViewController: UIViewController {
             passwordTextField.delegate = self
             firstNameTextField.delegate = self
             lastNameTextField.delegate = self
-        
-        graphicHelper.blurBackground(imageView: backgroundImage)
+        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
         setupTextFieldPalceHolder(textField: firstNameTextField, text: "First Name")
@@ -67,12 +53,13 @@ class SignupViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func didPressSignIn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+//        MainNavigationController.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func didPressNeedHelp(_ sender: UIButton) {
         let resetViewController = ResetViewController()
-        navigationController?.pushViewController(resetViewController, animated: true)
+        resetViewController.modalPresentationStyle = .fullScreen
+        present(resetViewController, animated: true, completion: nil)
     }
     
     

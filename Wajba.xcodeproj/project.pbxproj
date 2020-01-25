@@ -26,6 +26,7 @@
 		8173AAC123D79DB100BCF68D /* MenuBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AABF23D79DB100BCF68D /* MenuBarCollectionViewCell.xib */; };
 		8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */; };
 		8173AAC923D87AD700BCF68D /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AAC823D87AD700BCF68D /* MainCollectionViewCell.xib */; };
+		81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8173AABF23D79DB100BCF68D /* MenuBarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarCollectionViewCell.xib; sourceTree = "<group>"; };
 		8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		8173AAC823D87AD700BCF68D /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		8173AABC23D79B4C00BCF68D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */,
 				8173AABB23D79B3B00BCF68D /* Main Menu ViewController */,
 				8173AAB323D7413500BCF68D /* Reset ViewController */,
 				8173AAAD23D6D1DF00BCF68D /* Login ViewController */,
@@ -260,6 +263,7 @@
 				8173AA9E23D5262C00BCF68D /* extentions.swift in Sources */,
 				8173AAA823D6CA8800BCF68D /* TextFieldEdgeInset.swift in Sources */,
 				8173AAC023D79DB100BCF68D /* MenuBarCollectionViewCell.swift in Sources */,
+				81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */,
 				8173AAB623D74F8400BCF68D /* GraphicHelper.swift in Sources */,
 				8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */,
 				8173AA8A23D511ED00BCF68D /* AppDelegate.swift in Sources */,
