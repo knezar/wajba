@@ -14,6 +14,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
     
     let graphicHelper = GraphicHelper()
+    var delegate: LoginControllerDelegate?
     let mainCollectionCellID = "mainCollectionCell"
     lazy var menuBar: MenuBarView = {
           let mb = MenuBarView()
@@ -77,7 +78,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @objc func handleMenuButtonPressed() {
-        print("Menu button pressed")
+        delegate?.finishLoggingOut()
+        dismiss(animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -92,7 +94,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height * 0.475)
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height * 0.4)
     }
 }
 

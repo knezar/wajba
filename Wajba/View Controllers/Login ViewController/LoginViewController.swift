@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol LoginControllerDelegate: class {
-    func finishLoggingIn()
-}
+
 
 class LoginViewController: UIViewController {
         
@@ -43,7 +41,6 @@ class LoginViewController: UIViewController {
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
     }
     private func setupBackGroundblur() {
-//        view.backgroundColor = .white
         backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
     }
     private func setupTextFieldPalceHolder(textField: UITextField, text: String) {
@@ -62,8 +59,8 @@ class LoginViewController: UIViewController {
         else {return}
         let parameters = ["email": userName, "password":password]
         
-        delegate?.finishLoggingIn()
         dismiss(animated: true, completion: nil)
+        delegate?.finishLoggingIn()
     }
     
     @IBAction func didPressCreateAccount(_ sender: UIButton) {

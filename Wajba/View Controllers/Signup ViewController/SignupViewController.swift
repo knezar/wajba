@@ -30,17 +30,15 @@ class SignupViewController: UIViewController {
 
     // MARK: - Private
        func configureTextFields() {
-            emailTextField.delegate = self
-            passwordTextField.delegate = self
-            firstNameTextField.delegate = self
-            lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
         backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
         setupTextFieldPalceHolder(textField: firstNameTextField, text: "First Name")
         setupTextFieldPalceHolder(textField: lastNameTextField, text: "Last Name")
-            
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
         func setupTextFieldPalceHolder(textField: UITextField, text: String) {
             let attrs =  [
