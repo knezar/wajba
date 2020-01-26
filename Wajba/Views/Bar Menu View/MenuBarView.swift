@@ -28,7 +28,6 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         }
 
         private func setupCollectionView(){
-            
             collectionView.register(UINib(nibName:"MenuBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: menuBarCellID)
             collectionView.dataSource = self
             collectionView.delegate = self
@@ -56,11 +55,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: frame.width*0.285, height: frame.height)
         }
-        
-//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//            return 0
-//        }
-        
+    
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 
                 return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -70,8 +65,3 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
             fatalError("init(coder:) has not been implemented")
         }
 }
-
-
-
-
-//}
