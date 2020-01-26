@@ -12,7 +12,7 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         // Do any additional setup after loading the view.
 
         if isLoggedIn() {
@@ -26,22 +26,14 @@ class MainNavigationController: UINavigationController {
             navigationBarAppearace.tintColor = UIColor.white
             navigationBarAppearace.isTranslucent = false
             navigationBarAppearace.barTintColor = UIColor.getRGB(red: 128, green: 29, blue: 30)
-
             viewControllers = [mainViewController]
         } else {
-            perform(#selector(showLogInController), with: nil, afterDelay: 0.01)
+            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            viewControllers = [loginController]
         }
     }
-    
+        
     fileprivate func isLoggedIn() -> Bool{
         return true
-    }
-    
-    @objc func showLogInController() {
-        let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        loginController.modalPresentationStyle = .fullScreen
-        present(loginController,animated: true, completion: {
-            
-        })
     }
 }

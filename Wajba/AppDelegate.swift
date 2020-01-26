@@ -19,19 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
         return true
         } else {
-//            let navigationBarAppearace = UINavigationBar.appearance()
-//            let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
-//                             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)]
-//
-//            navigationBarAppearace.titleTextAttributes = attrs
-//            navigationBarAppearace.tintColor = UIColor.white
-//            navigationBarAppearace.isTranslucent = false
-//            navigationBarAppearace.barTintColor = UIColor.getRGB(red: 128, green: 29, blue: 30)
-
             self.window = UIWindow(frame: UIScreen.main.bounds)
             if let window = window {
             let rootViewController = MainNavigationController()
-//                UINavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil))
                 rootViewController.setNavigationBarHidden(true, animated: true)
                 window.rootViewController = rootViewController
                 window.makeKeyAndVisible()

@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-MN-efv">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="-15" y="-15" width="444" height="926"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wajba" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F5-b5-XDV">
                     <rect key="frame" x="30" y="173" width="354" height="72"/>
@@ -180,7 +180,7 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="0Oj-MN-efv" secondAttribute="trailing" id="17I-Xf-6HX"/>
+                <constraint firstAttribute="trailing" secondItem="0Oj-MN-efv" secondAttribute="trailing" constant="-15" id="17I-Xf-6HX"/>
                 <constraint firstItem="Lez-IY-aFs" firstAttribute="leading" secondItem="Zdv-bs-wg4" secondAttribute="leading" constant="30" id="4fX-Nj-gj2"/>
                 <constraint firstItem="1fr-vl-KjL" firstAttribute="leading" secondItem="2o1-JY-YED" secondAttribute="leading" id="5Nt-Dz-93q"/>
                 <constraint firstItem="HP4-Le-dxl" firstAttribute="leading" secondItem="GAp-Mj-qsP" secondAttribute="leading" id="7P9-31-9hY"/>
@@ -191,15 +191,15 @@
                 <constraint firstItem="n7x-cX-Z3X" firstAttribute="trailing" secondItem="Lez-IY-aFs" secondAttribute="trailing" id="ItW-Ta-LjO"/>
                 <constraint firstItem="iI6-Yr-A24" firstAttribute="bottom" secondItem="Hj4-P0-IPl" secondAttribute="centerY" id="JVZ-54-p6w"/>
                 <constraint firstItem="2F5-b5-XDV" firstAttribute="trailing" secondItem="Lez-IY-aFs" secondAttribute="trailing" id="PAe-P1-g2w"/>
-                <constraint firstItem="0Oj-MN-efv" firstAttribute="leading" secondItem="Zdv-bs-wg4" secondAttribute="leading" id="TNG-gb-kcR"/>
+                <constraint firstItem="0Oj-MN-efv" firstAttribute="leading" secondItem="Zdv-bs-wg4" secondAttribute="leading" constant="-15" id="TNG-gb-kcR"/>
                 <constraint firstItem="fLb-FG-EE8" firstAttribute="bottom" secondItem="Fql-YR-3WQ" secondAttribute="bottom" id="VUv-Tm-QEO"/>
                 <constraint firstItem="2F5-b5-XDV" firstAttribute="leading" secondItem="Lez-IY-aFs" secondAttribute="leading" id="W0t-j1-6K1"/>
                 <constraint firstItem="fLb-FG-EE8" firstAttribute="top" secondItem="Fql-YR-3WQ" secondAttribute="top" id="X1O-2E-ARW"/>
                 <constraint firstItem="tre-Qt-53f" firstAttribute="bottom" secondItem="iI6-Yr-A24" secondAttribute="bottom" id="YMa-GO-5cT"/>
                 <constraint firstItem="n7x-cX-Z3X" firstAttribute="leading" secondItem="Lez-IY-aFs" secondAttribute="leading" id="YTp-1O-404"/>
-                <constraint firstItem="0Oj-MN-efv" firstAttribute="top" secondItem="Zdv-bs-wg4" secondAttribute="top" id="Ygy-qk-45c"/>
+                <constraint firstItem="0Oj-MN-efv" firstAttribute="top" secondItem="Zdv-bs-wg4" secondAttribute="top" constant="-15" id="Ygy-qk-45c"/>
                 <constraint firstItem="HP4-Le-dxl" firstAttribute="top" secondItem="GAp-Mj-qsP" secondAttribute="top" id="akr-2b-IxT"/>
-                <constraint firstAttribute="bottom" secondItem="0Oj-MN-efv" secondAttribute="bottom" id="b7S-IE-vx4"/>
+                <constraint firstAttribute="bottom" secondItem="0Oj-MN-efv" secondAttribute="bottom" constant="-15" id="b7S-IE-vx4"/>
                 <constraint firstItem="1fr-vl-KjL" firstAttribute="top" secondItem="2o1-JY-YED" secondAttribute="top" id="bDI-4i-0br"/>
                 <constraint firstItem="tre-Qt-53f" firstAttribute="top" secondItem="iI6-Yr-A24" secondAttribute="top" id="bhv-GL-ntf"/>
                 <constraint firstItem="fLb-FG-EE8" firstAttribute="trailing" secondItem="Fql-YR-3WQ" secondAttribute="trailing" id="cBW-Ta-nXv"/>

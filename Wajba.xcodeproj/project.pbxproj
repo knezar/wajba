@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9923DD25CB00076485 /* MenuBarView.swift */; };
 		8173AA8A23D511ED00BCF68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8923D511ED00BCF68D /* AppDelegate.swift */; };
 		8173AA8C23D511ED00BCF68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */; };
 		8173AA9323D511F300BCF68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173AA9223D511F300BCF68D /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8162FE9923DD25CB00076485 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		8173AA8623D511ED00BCF68D /* Wajba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wajba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173AA8923D511ED00BCF68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8162FE9423DD213D00076485 /* Bar Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8162FE9923DD25CB00076485 /* MenuBarView.swift */,
+			);
+			path = "Bar Menu";
+			sourceTree = "<group>";
+		};
 		8173AA7D23D511ED00BCF68D = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		8173AABD23D79D4900BCF68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8162FE9423DD213D00076485 /* Bar Menu */,
 				8173AAC623D7F70D00BCF68D /* Menu Bar CollectionView Cell */,
 				8173AAC723D7F72800BCF68D /* Main CollectionView Cell */,
 			);
@@ -263,6 +274,7 @@
 				8173AA9E23D5262C00BCF68D /* extentions.swift in Sources */,
 				8173AAA823D6CA8800BCF68D /* TextFieldEdgeInset.swift in Sources */,
 				8173AAC023D79DB100BCF68D /* MenuBarCollectionViewCell.swift in Sources */,
+				8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */,
 				81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */,
 				8173AAB623D74F8400BCF68D /* GraphicHelper.swift in Sources */,
 				8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */,

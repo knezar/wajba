@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-2b-7D5">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="-15" y="-15" width="444" height="926"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wajba" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-6P-hRK">
                     <rect key="frame" x="30" y="287" width="354" height="72"/>
@@ -84,18 +84,18 @@
             </subviews>
             <constraints>
                 <constraint firstItem="dCe-Fw-ZM9" firstAttribute="centerY" secondItem="rRR-Qo-6aY" secondAttribute="centerY" id="2gE-ts-tv9"/>
-                <constraint firstItem="wJz-2b-7D5" firstAttribute="top" secondItem="BPw-AC-z4X" secondAttribute="top" id="E9f-zx-e9W"/>
-                <constraint firstAttribute="trailing" secondItem="wJz-2b-7D5" secondAttribute="trailing" id="GaZ-d7-Q4H"/>
+                <constraint firstItem="wJz-2b-7D5" firstAttribute="top" secondItem="BPw-AC-z4X" secondAttribute="top" constant="-15" id="E9f-zx-e9W"/>
+                <constraint firstAttribute="trailing" secondItem="wJz-2b-7D5" secondAttribute="trailing" constant="-15" id="GaZ-d7-Q4H"/>
                 <constraint firstItem="PeB-KH-MS6" firstAttribute="leading" secondItem="dCe-Fw-ZM9" secondAttribute="leading" id="Gzr-Ta-gWp"/>
                 <constraint firstItem="PeB-KH-MS6" firstAttribute="bottom" secondItem="dCe-Fw-ZM9" secondAttribute="bottom" id="LhB-Pf-erR"/>
                 <constraint firstItem="PeB-KH-MS6" firstAttribute="top" secondItem="dCe-Fw-ZM9" secondAttribute="top" id="O86-Ru-UVm"/>
                 <constraint firstItem="hDz-6P-hRK" firstAttribute="leading" secondItem="BLQ-h3-WBW" secondAttribute="leading" id="P4f-Cq-uU5"/>
                 <constraint firstItem="hDz-6P-hRK" firstAttribute="trailing" secondItem="BLQ-h3-WBW" secondAttribute="trailing" id="bb7-S5-fK6"/>
-                <constraint firstAttribute="bottom" secondItem="wJz-2b-7D5" secondAttribute="bottom" id="czC-3p-a2i"/>
+                <constraint firstAttribute="bottom" secondItem="wJz-2b-7D5" secondAttribute="bottom" constant="-15" id="czC-3p-a2i"/>
                 <constraint firstAttribute="trailing" secondItem="BLQ-h3-WBW" secondAttribute="trailing" constant="30" id="j23-0n-57H"/>
                 <constraint firstItem="BLQ-h3-WBW" firstAttribute="leading" secondItem="BPw-AC-z4X" secondAttribute="leading" constant="30" id="jIY-S6-ZWA"/>
                 <constraint firstItem="BLQ-h3-WBW" firstAttribute="top" secondItem="hDz-6P-hRK" secondAttribute="bottom" constant="64" id="jxp-nm-SdK"/>
-                <constraint firstItem="wJz-2b-7D5" firstAttribute="leading" secondItem="BPw-AC-z4X" secondAttribute="leading" id="klE-nQ-1oe"/>
+                <constraint firstItem="wJz-2b-7D5" firstAttribute="leading" secondItem="BPw-AC-z4X" secondAttribute="leading" constant="-15" id="klE-nQ-1oe"/>
                 <constraint firstItem="PeB-KH-MS6" firstAttribute="trailing" secondItem="dCe-Fw-ZM9" secondAttribute="trailing" id="pLi-vm-Y28"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="rRR-Qo-6aY"/>

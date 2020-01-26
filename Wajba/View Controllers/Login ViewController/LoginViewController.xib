@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTA-YS-8VV">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="-15" y="-15" width="405" height="697"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wajba" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkY-Rx-J1W">
                     <rect key="frame" x="30" y="167.5" width="315" height="72"/>
@@ -133,20 +133,20 @@
             </subviews>
             <constraints>
                 <constraint firstItem="SOi-zL-V45" firstAttribute="leading" secondItem="hPH-kd-69B" secondAttribute="leading" id="3AG-Hr-y7O"/>
-                <constraint firstAttribute="bottom" secondItem="tTA-YS-8VV" secondAttribute="bottom" id="3Nq-J1-I1f"/>
-                <constraint firstItem="tTA-YS-8VV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3gD-oJ-Nhp"/>
+                <constraint firstAttribute="bottom" secondItem="tTA-YS-8VV" secondAttribute="bottom" constant="-15" id="3Nq-J1-I1f"/>
+                <constraint firstItem="tTA-YS-8VV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-15" id="3gD-oJ-Nhp"/>
                 <constraint firstItem="SOi-zL-V45" firstAttribute="trailing" secondItem="hPH-kd-69B" secondAttribute="trailing" id="6Gz-AJ-JdD"/>
                 <constraint firstItem="h57-sR-T5Q" firstAttribute="bottom" secondItem="xoa-Sh-ZA6" secondAttribute="bottom" id="7wA-HT-ns0"/>
                 <constraint firstItem="C3N-J2-IpY" firstAttribute="trailing" secondItem="9Yh-GL-2qX" secondAttribute="trailing" id="CgC-4s-kAh"/>
                 <constraint firstItem="xoa-Sh-ZA6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ih8-w4-UjZ"/>
                 <constraint firstAttribute="trailing" secondItem="hPH-kd-69B" secondAttribute="trailing" constant="30" id="LGu-4W-90a"/>
                 <constraint firstItem="h57-sR-T5Q" firstAttribute="leading" secondItem="xoa-Sh-ZA6" secondAttribute="leading" id="MPB-jG-agN"/>
-                <constraint firstItem="tTA-YS-8VV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PYQ-ee-dvK"/>
+                <constraint firstItem="tTA-YS-8VV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-15" id="PYQ-ee-dvK"/>
                 <constraint firstItem="C3N-J2-IpY" firstAttribute="bottom" secondItem="9Yh-GL-2qX" secondAttribute="bottom" id="ROC-ny-hQe"/>
                 <constraint firstItem="xkY-Rx-J1W" firstAttribute="leading" secondItem="hPH-kd-69B" secondAttribute="leading" id="VMg-JD-XgK"/>
                 <constraint firstItem="hPH-kd-69B" firstAttribute="top" secondItem="xkY-Rx-J1W" secondAttribute="bottom" constant="64" id="ZqP-cB-RyJ"/>
                 <constraint firstItem="xkY-Rx-J1W" firstAttribute="trailing" secondItem="hPH-kd-69B" secondAttribute="trailing" id="dfE-82-ciR"/>
-                <constraint firstAttribute="trailing" secondItem="tTA-YS-8VV" secondAttribute="trailing" id="egC-aO-NhH"/>
+                <constraint firstAttribute="trailing" secondItem="tTA-YS-8VV" secondAttribute="trailing" constant="-15" id="egC-aO-NhH"/>
                 <constraint firstItem="C3N-J2-IpY" firstAttribute="top" secondItem="9Yh-GL-2qX" secondAttribute="top" id="etm-iO-w9W"/>
                 <constraint firstItem="h57-sR-T5Q" firstAttribute="trailing" secondItem="xoa-Sh-ZA6" secondAttribute="trailing" id="fJN-7E-gXe"/>
                 <constraint firstItem="SOi-zL-V45" firstAttribute="top" secondItem="hPH-kd-69B" secondAttribute="bottom" constant="10" id="kPq-Ry-fXa"/>

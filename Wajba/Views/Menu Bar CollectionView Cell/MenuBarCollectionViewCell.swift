@@ -15,11 +15,17 @@ class MenuBarCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        menuBarLabel.layer.masksToBounds = true
-        menuBarLabel.layer.cornerRadius = 20
-        menuBarLabel.backgroundColor = UIColor.getRGB(red: 128, green: 29, blue: 30)
-        self.backgroundColor = UIColor.clear
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 20
+        self.backgroundColor = UIColor(white: 1, alpha: 0.2)
         menuBarLabel.textColor = UIColor.white
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+                  self.backgroundColor = isSelected ? UIColor.getRGB(red: 128, green: 29, blue: 30) : UIColor(white: 1, alpha: 0.2)
+//                  menuBarLabel.font = isSelected ? UIFont.boldSystemFont(ofSize: 15) : UIFont.systemFont(ofSize: 13)
+              }
     }
 
 }
