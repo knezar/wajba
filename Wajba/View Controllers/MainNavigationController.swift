@@ -52,6 +52,6 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
     }
         
     fileprivate func isLoggedIn() -> Bool{
-        return false
+        return UserDefaultsHelper.manager.isLoggedIn()
     }
 }

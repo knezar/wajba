@@ -78,6 +78,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @objc func handleMenuButtonPressed() {
+        UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
         delegate?.finishLoggingOut()
         dismiss(animated: true, completion: nil)
     }

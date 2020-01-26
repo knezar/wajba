@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9923DD25CB00076485 /* MenuBarView.swift */; };
+		8162FE9D23DDDC7000076485 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */; };
 		8173AA8A23D511ED00BCF68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8923D511ED00BCF68D /* AppDelegate.swift */; };
 		8173AA8C23D511ED00BCF68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */; };
 		8173AA9323D511F300BCF68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173AA9223D511F300BCF68D /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		8162FE9923DD25CB00076485 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		8173AA8623D511ED00BCF68D /* Wajba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wajba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173AA8923D511ED00BCF68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,15 @@
 			path = "Bar Menu View";
 			sourceTree = "<group>";
 		};
+		8162FE9B23DDDC3F00076485 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8173AAB523D74F8400BCF68D /* GraphicHelper.swift */,
+				8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8173AA7D23D511ED00BCF68D = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +107,7 @@
 			children = (
 				8173AA8923D511ED00BCF68D /* AppDelegate.swift */,
 				8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */,
-				8173AAB523D74F8400BCF68D /* GraphicHelper.swift */,
+				8162FE9B23DDDC3F00076485 /* Helpers */,
 				8173AABD23D79D4900BCF68D /* Views */,
 				8173AABC23D79B4C00BCF68D /* View Controllers */,
 				8173AAB423D74F2600BCF68D /* extentions */,
@@ -270,6 +281,7 @@
 			files = (
 				8173AAB923D79B3300BCF68D /* MainMenuViewController.swift in Sources */,
 				8173AAAB23D6D13800BCF68D /* SignupViewController.swift in Sources */,
+				8162FE9D23DDDC7000076485 /* UserDefaultsHelper.swift in Sources */,
 				8173AAA623D65BDF00BCF68D /* LoginViewController.swift in Sources */,
 				8173AA9E23D5262C00BCF68D /* extentions.swift in Sources */,
 				8173AAA823D6CA8800BCF68D /* TextFieldEdgeInset.swift in Sources */,

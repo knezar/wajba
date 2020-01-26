@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
         else {return}
         let parameters = ["email": userName, "password":password]
         
+        UserDefaultsHelper.manager.setIsLoggedIn(bool: true)
         dismiss(animated: true, completion: nil)
         delegate?.finishLoggingIn()
     }
