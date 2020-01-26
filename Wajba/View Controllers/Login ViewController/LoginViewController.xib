@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="backgroundImage" destination="tTA-YS-8VV" id="mUP-fF-Koe"/>
                 <outlet property="passwordTextField" destination="9Yh-GL-2qX" id="Lbh-y6-fwk"/>
+                <outlet property="signinButton" destination="dNN-sf-pf9" id="SZJ-ph-bgE"/>
                 <outlet property="userNameTextField" destination="xoa-Sh-ZA6" id="Q65-bT-fCu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

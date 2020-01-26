@@ -24,8 +24,6 @@ class MenuBarCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
                   self.backgroundColor = isSelected ? UIColor.getRGB(red: 128, green: 29, blue: 30) : UIColor(white: 1, alpha: 0.2)
-//                  menuBarLabel.font = isSelected ? UIFont.boldSystemFont(ofSize: 15) : UIFont.systemFont(ofSize: 13)
               }
     }
-
 }

@@ -89,7 +89,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
             cell.titleLabel.text = titleItems[indexPath.item]
             cell.backgroundImage.image = UIImage(named: imageItems[indexPath.item])
          return cell
-//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

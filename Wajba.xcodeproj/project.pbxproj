@@ -67,12 +67,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8162FE9423DD213D00076485 /* Bar Menu */ = {
+		8162FE9423DD213D00076485 /* Bar Menu View */ = {
 			isa = PBXGroup;
 			children = (
 				8162FE9923DD25CB00076485 /* MenuBarView.swift */,
 			);
-			path = "Bar Menu";
+			path = "Bar Menu View";
 			sourceTree = "<group>";
 		};
 		8173AA7D23D511ED00BCF68D = {
@@ -167,7 +167,7 @@
 		8173AABD23D79D4900BCF68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8162FE9423DD213D00076485 /* Bar Menu */,
+				8162FE9423DD213D00076485 /* Bar Menu View */,
 				8173AAC623D7F70D00BCF68D /* Menu Bar CollectionView Cell */,
 				8173AAC723D7F72800BCF68D /* Main CollectionView Cell */,
 			);

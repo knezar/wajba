@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol LoginControllerDelegate: class {
+    func finishLoggingIn()
+}
+
 class LoginViewController: UIViewController {
         
     // MARK: - Properties
     let graphicHelper = GraphicHelper()
+    var delegate: LoginControllerDelegate?
 
     // MARK: - Outlets
+    @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -56,6 +62,8 @@ class LoginViewController: UIViewController {
         else {return}
         let parameters = ["email": userName, "password":password]
         
+        delegate?.finishLoggingIn()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func didPressCreateAccount(_ sender: UIButton) {

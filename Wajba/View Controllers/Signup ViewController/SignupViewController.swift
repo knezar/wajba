@@ -53,9 +53,9 @@ class SignupViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func didPressSignIn(_ sender: UIButton) {
-//        MainNavigationController.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func didPressNeedHelp(_ sender: UIButton) {
         let resetViewController = ResetViewController()
         resetViewController.modalPresentationStyle = .fullScreen
