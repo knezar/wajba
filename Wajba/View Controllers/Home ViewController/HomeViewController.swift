@@ -1,5 +1,5 @@
 //
-//  MainMenuViewController.swift
+//  HomeViewController.swift
 //  Wajba
 //
 //  Created by C4Q on 1/21/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
@@ -32,7 +32,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         configureMainCollectionView()
         configureNavItems()
         backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
-        navigationItem.title = "Wajba"
+//        navigationItem.title = "Wajba"
     }
     
     func configureMenuBar() {
@@ -45,16 +45,12 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func configureNavItems() {
-        navigationItem.leftBarButtonItem =  navButtonConfiguration(string: "Menu Icon", selector: #selector (handleMenuButtonPressed))
-        navigationItem.rightBarButtonItem = navButtonConfiguration(string: "Search Icon", selector: #selector (handleSearchButtonPressed))
+        navigationItem.leftBarButtonItem =  navButtonConfiguration(image: #imageLiteral(resourceName: "Menu Icon"), selector: #selector (handleMenuButtonPressed))
+        navigationItem.rightBarButtonItem =  navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector: #selector (handleSearchButtonPressed))
     }
     
-    func navButtonConfiguration(string: String, selector: Selector) -> UIBarButtonItem {
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: string), for: .normal)
-        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        button.addTarget(self, action: selector, for: .touchUpInside)
-        let barButton = UIBarButtonItem(customView: button)
+    func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
+        let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)
         return barButton
     }
     

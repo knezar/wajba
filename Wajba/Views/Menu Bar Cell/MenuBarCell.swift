@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuBarCollectionViewCell: UICollectionViewCell {
+class MenuBarCell: UICollectionViewCell {
 
     @IBOutlet weak var menuBarLabel: UILabel!
     override func awakeFromNib() {

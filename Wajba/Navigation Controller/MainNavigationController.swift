@@ -21,7 +21,7 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
         view.backgroundColor = .clear
         
         // Do any additional setup after loading the view.
-
+        
         if isLoggedIn() {
             finishLoggingIn()
         } else {
@@ -30,18 +30,10 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
     }
     
     func finishLoggingIn() {
-        let mainViewController = MainMenuViewController(nibName: "MainMenuViewController", bundle: nil)
-        mainViewController.delegate = self
-        let navigationBarAppearace = UINavigationBar.appearance()
-        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
-                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)]
-        
-        navigationBarAppearace.titleTextAttributes = attrs
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.isTranslucent = false
-        navigationBarAppearace.barTintColor = UIColor.getRGB(red: 128, green: 29, blue: 30)
-        setNavigationBarHidden(false, animated: true)
-        setViewControllers([mainViewController], animated: true)
+        let containerController = ContainerController()
+        containerController.homeController.delegate = self
+        setNavigationBarHidden(true, animated: true)
+        setViewControllers([containerController], animated: true)
     }
     
     func finishLoggingOut() {

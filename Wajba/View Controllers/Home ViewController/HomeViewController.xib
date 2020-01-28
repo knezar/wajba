@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController" customModule="Wajba" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Wajba" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImage" destination="1ey-0V-6Zf" id="vx8-DX-uWW"/>
                 <outlet property="mainCollectionView" destination="0Yb-gW-OxR" id="KIh-1p-d8H"/>

@@ -15,6 +15,7 @@ class UserDefaultsHelper {
     private let defaults = UserDefaults.standard
     func setIsLoggedIn(bool: Bool) {
         defaults.set(bool, forKey: loggedInKey)
+        defaults.synchronize()
     }
     func isLoggedIn() -> Bool {
         return defaults.bool(forKey: loggedInKey)

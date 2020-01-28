@@ -28,7 +28,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         }
 
         private func setupCollectionView(){
-            collectionView.register(UINib(nibName:"MenuBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: menuBarCellID)
+            collectionView.register(UINib(nibName:"MenuBarCell", bundle: nil), forCellWithReuseIdentifier: menuBarCellID)
             collectionView.dataSource = self
             collectionView.delegate = self
             addSubview(collectionView)
@@ -47,7 +47,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuBarCellID, for: indexPath) as! MenuBarCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuBarCellID, for: indexPath) as! MenuBarCell
             cell.menuBarLabel.text = menuBarItems[indexPath.item]
             return cell
         }
