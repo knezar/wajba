@@ -34,7 +34,7 @@ class SignupViewController: UIViewController {
         passwordTextField.delegate = self
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
-        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
+        backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
         setupTextFieldPalceHolder(textField: firstNameTextField, text: "First Name")

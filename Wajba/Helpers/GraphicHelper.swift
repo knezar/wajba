@@ -7,6 +7,9 @@
 //
 
 import UIKit
+//import CoreImage
+//import CoreGraphics
+//import Darwin
 
 class GraphicHelper: NSObject {
 
@@ -14,16 +17,20 @@ class GraphicHelper: NSObject {
         super.init()
     }
     
-    func blurBackground(imageView: UIImageView) {
-         let blurEffect = UIBlurEffect(style: .dark)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.insertSubview(blurView, at: 0)
+    func addBlurTo(image: UIImage, radius: CGFloat) -> UIImage {
+        let ciContext = CIContext(options: nil)
+        guard let inputImage = CIImage(image: image) else {return image}
+        guard let gaussianBlurFilter = CIFilter(name: "CIGaussianBlur") else { return image }
+        gaussianBlurFilter.setValue(inputImage, forKey: kCIInputImageKey)
+        gaussianBlurFilter.setValue(radius, forKey: "inputRadius")
 
-        NSLayoutConstraint.activate([
-        blurView.heightAnchor.constraint(equalTo: imageView.heightAnchor),
-        blurView.widthAnchor.constraint(equalTo: imageView.widthAnchor),
-        ])
+        guard let blurdImage = gaussianBlurFilter.value(forKey: kCIOutputImageKey) as? CIImage else { return image }
+        guard let monochromeFilter = CIFilter(name: "CIExposureAdjust") else { return image }
+        monochromeFilter.setValue(blurdImage, forKey: kCIInputImageKey)
+        monochromeFilter.setValue(-0.5, forKey: "inputEV")
+        guard let resultImage2 = monochromeFilter.value(forKey: kCIOutputImageKey) as? CIImage else { return image }
+        guard let cgImage2 = ciContext.createCGImage(resultImage2, from: inputImage.extent) else { return image }
+        return UIImage(cgImage: cgImage2)
     }
     
     func setupTextFieldPalceHolder(textField: UITextField, text: String) {

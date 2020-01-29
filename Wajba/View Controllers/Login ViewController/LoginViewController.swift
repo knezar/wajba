@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         setupTextFieldPalceHolder(textField: passwordTextField, text: "Password")
     }
     private func setupBackGroundblur() {
-        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
+        backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
     }
     private func setupTextFieldPalceHolder(textField: UITextField, text: String) {
         let attrs =  [

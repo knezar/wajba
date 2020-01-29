@@ -8,13 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController {
     
+    // MARK: - Properties
+
     let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
-    
     let graphicHelper = GraphicHelper()
-    var delegate: LoginControllerDelegate?
+    var delegate: HomeControllerDelegate?
     let mainCollectionCellID = "mainCollectionCell"
     lazy var menuBar: MenuBarView = {
           let mb = MenuBarView()
@@ -22,19 +23,23 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
           return mb
       }()
 
+    // MARK: - Outlets
+
     @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureMenuBar()
         configureMainCollectionView()
         configureNavItems()
-        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
-//        navigationItem.title = "Wajba"
+        backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
+        navigationItem.title = "Wajba"
     }
     
+    // MARK: - Private
     func configureMenuBar() {
         view.addSubview(menuBar)
         menuBar.translatesAutoresizingMaskIntoConstraints = false
@@ -69,16 +74,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         mainCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
+    // MARK: - Actions
+
     @objc func handleSearchButtonPressed() {
         print("search button pressed")
     }
     
     @objc func handleMenuButtonPressed() {
-        UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
-        delegate?.finishLoggingOut()
-        dismiss(animated: true, completion: nil)
+//        UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
+//        delegate?.finishLoggingOut()
+//        dismiss(animated: true, completion: nil)
+        
+        delegate?.slideOutMenuToggled()
     }
-    
+}
+    // MARK: - UICollectionViewDelegate
+extension HomeViewController: UICollectionViewDelegate {
+
+}
+
+// MARK: - UICollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return imageItems.count
     }
@@ -89,11 +105,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cell.backgroundImage.image = UIImage(named: imageItems[indexPath.item])
          return cell
     }
-    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height * 0.4)
     }
 }
-
-
-

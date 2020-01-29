@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol LoginControllerDelegate: class {
-    func finishLoggingIn()
-    func finishLoggingOut()
-}
-
 class MainNavigationController: UINavigationController, LoginControllerDelegate {
 
     
@@ -31,15 +26,13 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
     
     func finishLoggingIn() {
         let containerController = ContainerController()
-        containerController.homeController.delegate = self
-        setNavigationBarHidden(true, animated: true)
+//        containerController.homeController.delegate = self
         setViewControllers([containerController], animated: true)
     }
     
     func finishLoggingOut() {
         let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         loginController.delegate = self
-        setNavigationBarHidden(true, animated: true)
         setViewControllers([loginController], animated: true)
     }
         

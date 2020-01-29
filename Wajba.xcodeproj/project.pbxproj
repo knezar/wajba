@@ -31,6 +31,7 @@
 		8173AAC123D79DB100BCF68D /* MenuBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AABF23D79DB100BCF68D /* MenuBarCell.xib */; };
 		8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */; };
 		8173AAC923D87AD700BCF68D /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AAC823D87AD700BCF68D /* MainCollectionViewCell.xib */; };
+		817DE3DA23E1094600B3D89B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DE3D923E1094600B3D89B /* Protocols.swift */; };
 		81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		8173AABF23D79DB100BCF68D /* MenuBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarCell.xib; sourceTree = "<group>"; };
 		8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		8173AAC823D87AD700BCF68D /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		817DE3D923E1094600B3D89B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		8162FE9B23DDDC3F00076485 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				817DE3D923E1094600B3D89B /* Protocols.swift */,
 				8173AAB523D74F8400BCF68D /* GraphicHelper.swift */,
 				8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */,
 			);
@@ -103,12 +106,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8162FE9F23DE222700076485 /* Navigation Controller */ = {
+		8162FE9F23DE222700076485 /* Container Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				81E96DA123DA93FE00496CB1 /* MainNavigationController.swift */,
+				8162FEA023DE225B00076485 /* ContainerController.swift */,
 			);
-			path = "Navigation Controller";
+			path = "Container Controllers";
 			sourceTree = "<group>";
 		};
 		8162FEA623DE229500076485 /* Menu ViewController */ = {
@@ -139,7 +143,7 @@
 		8173AA8823D511ED00BCF68D /* Wajba */ = {
 			isa = PBXGroup;
 			children = (
-				8162FE9F23DE222700076485 /* Navigation Controller */,
+				8162FE9F23DE222700076485 /* Container Controllers */,
 				8173AABC23D79B4C00BCF68D /* View Controllers */,
 				8173AABD23D79D4900BCF68D /* Views */,
 				8162FE9B23DDDC3F00076485 /* Helpers */,
@@ -198,7 +202,6 @@
 		8173AABC23D79B4C00BCF68D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8162FEA023DE225B00076485 /* ContainerController.swift */,
 				8173AABB23D79B3B00BCF68D /* Home ViewController */,
 				8162FEA623DE229500076485 /* Menu ViewController */,
 				8173AAB323D7413500BCF68D /* Reset ViewController */,
@@ -328,6 +331,7 @@
 				8162FEA123DE225B00076485 /* ContainerController.swift in Sources */,
 				8173AA8A23D511ED00BCF68D /* AppDelegate.swift in Sources */,
 				8173AAB123D7412700BCF68D /* ResetViewController.swift in Sources */,
+				817DE3DA23E1094600B3D89B /* Protocols.swift in Sources */,
 				8173AA8C23D511ED00BCF68D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

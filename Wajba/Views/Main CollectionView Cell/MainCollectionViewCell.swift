@@ -21,15 +21,11 @@ class MainCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        setCornerRadius(view: backgroundImage, cornerR: 8)
-        setCornerRadius(view: topLabel, cornerR: 4)
-        setCornerRadius(view: gradientView, cornerR: 8)
+        backgroundImage.setCornerRadius(cornerR: 8)
+        topLabel.setCornerRadius(cornerR: 4)
+        gradientView.setCornerRadius(cornerR: 8)
         graphicHelper.setGradient(view: gradientView)
     }
     
-    private func setCornerRadius(view: UIView, cornerR: CGFloat) {
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = cornerR
-    }
+
 }

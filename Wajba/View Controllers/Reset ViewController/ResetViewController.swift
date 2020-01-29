@@ -27,7 +27,7 @@ class ResetViewController: UIViewController {
          emailTextField.delegate = self
 
         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
-        backgroundImage.image = #imageLiteral(resourceName: "Background").blurred(radius: 14)
+        backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
          self.navigationController?.setNavigationBarHidden(true, animated: true)
      }
     func setupTextFieldPalceHolder(textField: UITextField, text: String) {
