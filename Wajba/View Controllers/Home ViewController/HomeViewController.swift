@@ -32,9 +32,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavItems()
         configureMenuBar()
         configureMainCollectionView()
-        configureNavItems()
         backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
         navigationItem.title = "Wajba"
     }

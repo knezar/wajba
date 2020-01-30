@@ -54,14 +54,21 @@ class ContainerController: UIViewController {
     
     func configureMenuController() {
         if menuController == nil {
-            menuController = MenuController(nibName: "MenuController", bundle: nil)
+            menuController = SlideOutMenuController()
             view.insertSubview(menuController.view, at: 0)
+            menuController.view.translatesAutoresizingMaskIntoConstraints = false
+            menuController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            menuController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            menuController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            menuController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
             addChild(menuController)
             menuController.didMove(toParent: self)
             print("did add menuController")
         }
     }
     
+    // MARK: - Actions
+
     func showMenuController(shouldExpand: Bool) {
         if shouldExpand {
             // show menu
@@ -73,6 +80,8 @@ class ContainerController: UIViewController {
                 self.leadingConstraint.constant = self.centerController.view.frame.width * 0.6
                 self.trailingConstraint.constant = self.centerController.view.frame.width * 0.6
             }, completion: nil)
+            homeController.mainCollectionView.isUserInteractionEnabled = false
+            homeController.menuBar.isUserInteractionEnabled = false
         } else {
             // hide menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
@@ -82,11 +91,13 @@ class ContainerController: UIViewController {
                 self.leadingConstraint.constant = 0
                 self.trailingConstraint.constant = 0
             }, completion: nil)
+            homeController.mainCollectionView.isUserInteractionEnabled = true
+             homeController.menuBar.isUserInteractionEnabled = true
         }
     }
 }
 
-// MARK: - Protocol
+// MARK: - Protocols
 
 extension ContainerController: HomeControllerDelegate {
     func slideOutMenuToggled() {

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		814FAC9023E364A1001AE1DC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814FAC8F23E364A1001AE1DC /* HomeViewController.xib */; };
 		8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9923DD25CB00076485 /* MenuBarView.swift */; };
 		8162FE9D23DDDC7000076485 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */; };
 		8162FEA123DE225B00076485 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FEA023DE225B00076485 /* ContainerController.swift */; };
-		8162FEA423DE228E00076485 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FEA223DE228E00076485 /* MenuController.swift */; };
-		8162FEA523DE228E00076485 /* MenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8162FEA323DE228E00076485 /* MenuController.xib */; };
+		8162FEA423DE228E00076485 /* SlideOutMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FEA223DE228E00076485 /* SlideOutMenuController.swift */; };
 		8173AA8A23D511ED00BCF68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8923D511ED00BCF68D /* AppDelegate.swift */; };
 		8173AA8C23D511ED00BCF68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */; };
 		8173AA9323D511F300BCF68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173AA9223D511F300BCF68D /* Assets.xcassets */; };
@@ -26,7 +26,6 @@
 		8173AAB223D7412700BCF68D /* ResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AAB023D7412700BCF68D /* ResetViewController.xib */; };
 		8173AAB623D74F8400BCF68D /* GraphicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AAB523D74F8400BCF68D /* GraphicHelper.swift */; };
 		8173AAB923D79B3300BCF68D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AAB723D79B3300BCF68D /* HomeViewController.swift */; };
-		8173AABA23D79B3300BCF68D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AAB823D79B3300BCF68D /* HomeViewController.xib */; };
 		8173AAC023D79DB100BCF68D /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AABE23D79DB100BCF68D /* MenuBarCell.swift */; };
 		8173AAC123D79DB100BCF68D /* MenuBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8173AABF23D79DB100BCF68D /* MenuBarCell.xib */; };
 		8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */; };
@@ -36,11 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		814FAC8F23E364A1001AE1DC /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8162FE9923DD25CB00076485 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		8162FEA023DE225B00076485 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
-		8162FEA223DE228E00076485 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		8162FEA323DE228E00076485 /* MenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuController.xib; sourceTree = "<group>"; };
+		8162FEA223DE228E00076485 /* SlideOutMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuController.swift; sourceTree = "<group>"; };
 		8173AA8623D511ED00BCF68D /* Wajba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wajba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173AA8923D511ED00BCF68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173AA8B23D511ED00BCF68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		8173AAB023D7412700BCF68D /* ResetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetViewController.xib; sourceTree = "<group>"; };
 		8173AAB523D74F8400BCF68D /* GraphicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicHelper.swift; sourceTree = "<group>"; };
 		8173AAB723D79B3300BCF68D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8173AAB823D79B3300BCF68D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8173AABE23D79DB100BCF68D /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
 		8173AABF23D79DB100BCF68D /* MenuBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarCell.xib; sourceTree = "<group>"; };
 		8173AAC223D7F70000BCF68D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,13 +113,12 @@
 			path = "Container Controllers";
 			sourceTree = "<group>";
 		};
-		8162FEA623DE229500076485 /* Menu ViewController */ = {
+		8162FEA623DE229500076485 /* slideOutMenu Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8162FEA223DE228E00076485 /* MenuController.swift */,
-				8162FEA323DE228E00076485 /* MenuController.xib */,
+				8162FEA223DE228E00076485 /* SlideOutMenuController.swift */,
 			);
-			path = "Menu ViewController";
+			path = "slideOutMenu Controller";
 			sourceTree = "<group>";
 		};
 		8173AA7D23D511ED00BCF68D = {
@@ -194,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				8173AAB723D79B3300BCF68D /* HomeViewController.swift */,
-				8173AAB823D79B3300BCF68D /* HomeViewController.xib */,
+				814FAC8F23E364A1001AE1DC /* HomeViewController.xib */,
 			);
 			path = "Home ViewController";
 			sourceTree = "<group>";
@@ -203,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				8173AABB23D79B3B00BCF68D /* Home ViewController */,
-				8162FEA623DE229500076485 /* Menu ViewController */,
+				8162FEA623DE229500076485 /* slideOutMenu Controller */,
 				8173AAB323D7413500BCF68D /* Reset ViewController */,
 				8173AAAD23D6D1DF00BCF68D /* Login ViewController */,
 				8173AAAE23D73A3700BCF68D /* Signup ViewController */,
@@ -300,12 +297,11 @@
 				8173AAA523D65BDF00BCF68D /* LoginViewController.xib in Resources */,
 				8173AAB223D7412700BCF68D /* ResetViewController.xib in Resources */,
 				8173AA9623D511F300BCF68D /* LaunchScreen.storyboard in Resources */,
-				8162FEA523DE228E00076485 /* MenuController.xib in Resources */,
 				8173AAAC23D6D13800BCF68D /* SignupViewController.xib in Resources */,
-				8173AABA23D79B3300BCF68D /* HomeViewController.xib in Resources */,
 				8173AA9323D511F300BCF68D /* Assets.xcassets in Resources */,
 				8173AAC123D79DB100BCF68D /* MenuBarCell.xib in Resources */,
 				8173AAC923D87AD700BCF68D /* MainCollectionViewCell.xib in Resources */,
+				814FAC9023E364A1001AE1DC /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +320,7 @@
 				8173AAA823D6CA8800BCF68D /* TextFieldEdgeInset.swift in Sources */,
 				8173AAC023D79DB100BCF68D /* MenuBarCell.swift in Sources */,
 				8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */,
-				8162FEA423DE228E00076485 /* MenuController.swift in Sources */,
+				8162FEA423DE228E00076485 /* SlideOutMenuController.swift in Sources */,
 				81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */,
 				8173AAB623D74F8400BCF68D /* GraphicHelper.swift in Sources */,
 				8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */,
