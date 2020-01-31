@@ -11,8 +11,9 @@ import UIKit
 class SlideOutMenuController: UIViewController {
     
     // MARK: - Properties
-    let options = ["ALL", "TRENDING", "NEW", "FAVORITES"]
+    let cellOptions = ["ALL", "TRENDING", "NEW", "FAVORITES"]
     let graphicHelper = GraphicHelper()
+    var delegate: LoginControllerDelegate?
     lazy var background: UIImageView = {
         let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFill
@@ -62,14 +63,15 @@ class SlideOutMenuController: UIViewController {
 // MARK: - TableViewDelegate
 extension SlideOutMenuController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+            UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
+            delegate?.finishLoggingOut()
         }
 }
 // MARK: - TableViewDataSource
 extension SlideOutMenuController: UITableViewDataSource {
 //    head
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count+1
+        return cellOptions.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,11 +80,11 @@ extension SlideOutMenuController: UITableViewDataSource {
         cell.selectionStyle = .none
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
 
-        if  indexPath.row == options.count{
-            cell.textLabel?.text = " SignOut "
+        if  indexPath.row == cellOptions.count{
+            cell.textLabel?.text = "LOGOUT"
             cell.textLabel?.textColor = UIColor(white: 1, alpha: 0.5)
         }else {
-            cell.textLabel?.text = options[indexPath.row]
+            cell.textLabel?.text = cellOptions[indexPath.row]
             cell.textLabel?.textColor = .white
         }
         return cell

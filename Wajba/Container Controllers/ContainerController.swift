@@ -10,14 +10,13 @@ import UIKit
 
 class ContainerController: UIViewController {
     // MARK: - Properties
-    let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-    var menuController:  UIViewController!
+    weak var loginControllerDelegate: LoginControllerDelegate?
+    var menuController: UIViewController!
     var centerController: UIViewController!
     private var topConstraint: NSLayoutConstraint!
     private var leadingConstraint: NSLayoutConstraint!
     private var trailingConstraint: NSLayoutConstraint!
     private var bottomConstraint: NSLayoutConstraint!
-
     var isExpanded = false
     
     
@@ -31,6 +30,7 @@ class ContainerController: UIViewController {
     
     // MARK: - Private
     func configureHomeController() {
+        let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         homeController.delegate = self
         centerController = UINavigationController(rootViewController: homeController)
         let navigationBarAppearace = UINavigationBar.appearance()
@@ -53,8 +53,10 @@ class ContainerController: UIViewController {
     }
     
     func configureMenuController() {
+        let menuVC = SlideOutMenuController()
+        menuVC.delegate = loginControllerDelegate
         if menuController == nil {
-            menuController = SlideOutMenuController()
+            menuController = menuVC
             view.insertSubview(menuController.view, at: 0)
             menuController.view.translatesAutoresizingMaskIntoConstraints = false
             menuController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -80,8 +82,8 @@ class ContainerController: UIViewController {
                 self.leadingConstraint.constant = self.centerController.view.frame.width * 0.6
                 self.trailingConstraint.constant = self.centerController.view.frame.width * 0.6
             }, completion: nil)
-            homeController.mainCollectionView.isUserInteractionEnabled = false
-            homeController.menuBar.isUserInteractionEnabled = false
+//            homeController.mainCollectionView.isUserInteractionEnabled = false
+//            homeController.menuBar.isUserInteractionEnabled = false
         } else {
             // hide menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
@@ -91,8 +93,8 @@ class ContainerController: UIViewController {
                 self.leadingConstraint.constant = 0
                 self.trailingConstraint.constant = 0
             }, completion: nil)
-            homeController.mainCollectionView.isUserInteractionEnabled = true
-             homeController.menuBar.isUserInteractionEnabled = true
+//            homeController.mainCollectionView.isUserInteractionEnabled = true
+//             homeController.menuBar.isUserInteractionEnabled = true
         }
     }
 }

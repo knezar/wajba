@@ -24,8 +24,7 @@ class ResetViewController: UIViewController {
     
     // MARK: - Private
     func configureTextFields() {
-         emailTextField.delegate = self
-
+        emailTextField.delegate = self
         setupTextFieldPalceHolder(textField: emailTextField, text: "Email")
         backgroundImage.image = graphicHelper.addBlurTo(image: #imageLiteral(resourceName: "Background"), radius: 14)
          self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -40,7 +39,8 @@ class ResetViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func didPressReset(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)//        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     

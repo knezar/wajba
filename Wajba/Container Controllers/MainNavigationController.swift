@@ -26,7 +26,7 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
     
     func finishLoggingIn() {
         let containerController = ContainerController()
-//        containerController.homeController.delegate = self
+        containerController.loginControllerDelegate = self
         setViewControllers([containerController], animated: true)
     }
     

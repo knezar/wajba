@@ -11,7 +11,6 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
-
     let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
     let graphicHelper = GraphicHelper()
@@ -24,7 +23,6 @@ class HomeViewController: UIViewController {
       }()
 
     // MARK: - Outlets
-
     @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -61,8 +59,8 @@ class HomeViewController: UIViewController {
     
     func configureMainCollectionView() {
         self.mainCollectionView.register(UINib(nibName:"MainCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: mainCollectionCellID)
-        self.mainCollectionView.delegate = self
-        self.mainCollectionView.dataSource = self
+        mainCollectionView.delegate = self
+        mainCollectionView.dataSource = self
         mainCollectionView.backgroundColor = UIColor.clear
         mainCollectionView.showsVerticalScrollIndicator = false
         
@@ -81,10 +79,6 @@ class HomeViewController: UIViewController {
     }
     
     @objc func handleMenuButtonPressed() {
-//        UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
-//        delegate?.finishLoggingOut()
-//        dismiss(animated: true, completion: nil)
-        
         delegate?.slideOutMenuToggled()
     }
 }
