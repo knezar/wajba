@@ -40,8 +40,7 @@ class ResetViewController: UIViewController {
     // MARK: - Actions
     @IBAction func didPressReset(_ sender: UIButton) {
 //        self.navigationController?.popToRootViewController(animated: true)
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)//        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
 }

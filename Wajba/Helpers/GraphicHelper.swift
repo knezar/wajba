@@ -45,7 +45,7 @@ class GraphicHelper: NSObject {
          let tintLayer = CAGradientLayer()
         tintLayer.frame = view.bounds
         tintLayer.colors = [UIColor.clear.cgColor, UIColor(white: 0, alpha: 0.65).cgColor]
-        tintLayer.locations = [0.0, 1.0]
+        tintLayer.locations = [0.25, 1.0]
         view.layer.addSublayer(tintLayer)
      }
 }

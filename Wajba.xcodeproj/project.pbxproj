@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		814FAC9023E364A1001AE1DC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814FAC8F23E364A1001AE1DC /* HomeViewController.xib */; };
+		814FAC9323E3FBD4001AE1DC /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814FAC9123E3FBD3001AE1DC /* DetailController.swift */; };
+		814FAC9423E3FBD4001AE1DC /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814FAC9223E3FBD3001AE1DC /* DetailController.xib */; };
 		8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9923DD25CB00076485 /* MenuBarView.swift */; };
 		8162FE9D23DDDC7000076485 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */; };
 		8162FEA123DE225B00076485 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162FEA023DE225B00076485 /* ContainerController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		814FAC8F23E364A1001AE1DC /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		814FAC9123E3FBD3001AE1DC /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		814FAC9223E3FBD3001AE1DC /* DetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
 		8162FE9923DD25CB00076485 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		8162FE9C23DDDC7000076485 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		8162FEA023DE225B00076485 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814FAC9523E3FBE3001AE1DC /* Detail Controller */ = {
+			isa = PBXGroup;
+			children = (
+				814FAC9123E3FBD3001AE1DC /* DetailController.swift */,
+				814FAC9223E3FBD3001AE1DC /* DetailController.xib */,
+			);
+			path = "Detail Controller";
+			sourceTree = "<group>";
+		};
 		8162FE9423DD213D00076485 /* Menu Bar View */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 				8173AAB323D7413500BCF68D /* Reset ViewController */,
 				8173AAAD23D6D1DF00BCF68D /* Login ViewController */,
 				8173AAAE23D73A3700BCF68D /* Signup ViewController */,
+				814FAC9523E3FBE3001AE1DC /* Detail Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -298,6 +312,7 @@
 				8173AAB223D7412700BCF68D /* ResetViewController.xib in Resources */,
 				8173AA9623D511F300BCF68D /* LaunchScreen.storyboard in Resources */,
 				8173AAAC23D6D13800BCF68D /* SignupViewController.xib in Resources */,
+				814FAC9423E3FBD4001AE1DC /* DetailController.xib in Resources */,
 				8173AA9323D511F300BCF68D /* Assets.xcassets in Resources */,
 				8173AAC123D79DB100BCF68D /* MenuBarCell.xib in Resources */,
 				8173AAC923D87AD700BCF68D /* MainCollectionViewCell.xib in Resources */,
@@ -321,6 +336,7 @@
 				8173AAC023D79DB100BCF68D /* MenuBarCell.swift in Sources */,
 				8162FE9A23DD25CB00076485 /* MenuBarView.swift in Sources */,
 				8162FEA423DE228E00076485 /* SlideOutMenuController.swift in Sources */,
+				814FAC9323E3FBD4001AE1DC /* DetailController.swift in Sources */,
 				81E96DA223DA93FE00496CB1 /* MainNavigationController.swift in Sources */,
 				8173AAB623D74F8400BCF68D /* GraphicHelper.swift in Sources */,
 				8173AAC423D7F70000BCF68D /* MainCollectionViewCell.swift in Sources */,

@@ -73,7 +73,6 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - Actions
-
     @objc func handleSearchButtonPressed() {
         print("search button pressed")
     }
@@ -82,6 +81,7 @@ class HomeViewController: UIViewController {
         delegate?.slideOutMenuToggled()
     }
 }
+
     // MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
 
